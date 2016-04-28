@@ -1,5 +1,5 @@
 """
-Python Simulator for Predix
+Python Sample Microservice for Predix
 
 Author: 212421693
 
