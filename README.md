@@ -1,5 +1,7 @@
-# python-mircoservice-starter
-This is a sample hello microservice template for python.This application is based on Flask and gunicorn as documented on the requirement.txt file. The requirement.txt is necessary and defines the python modules.The python buildpack at cf push process, pulls in these python modules. The manifest.yml has the startup command for the application.
+# python-uaa-mircoservice-starter
+THis is a sample application integrated with predix UAA to show case authoce workflow with python.The application landing page, will show a login link.The login link will redirect users to Predix UAA login page ,promting the user to input username and password. Once the user has successfully logged in the UAA redirects user back to the using the redirect url. In this application the redirect URL is "/callback". The callback endpoint calls the oauth workflow to get access_token from the UAA, then redirects the users to "/secure" endpoint. The "/secure" endpoint,checks the existance of token in the session. If the token is found it displays a Login message,otherwise indicates the to the user to login with Predix UAA.
+
+This application is based on Flask ,requests and gunicorn as documented on the requirement.txt file. The requirement.txt is necessary and defines the python modules.The python buildpack at cf push process, pulls in these python modules. The manifest.yml has the startup command for the application.
 
 
 ## Deploy to cloud
