@@ -76,15 +76,15 @@ def UAAcallback():
         return "Error: " + error
     state = request.args.get('state', '')
     if not is_valid_state(state):
-        # Uh-oh, this request wasn't started by us!
-        abort(403)
+        print 'Uh-oh, this request wasnt started by us!'
+        #abort(403)
     code = request.args.get('code')
     access_token = get_token(code)
     # TODO: store the user token in sesson or redis cache , but for now use Flask session
     session['access_token'] = access_token
-    return redirect(APP_URL+"/secure", code=302)
     print "You have logged in using UAA  with this access token %s" % access_token
-
+    return redirect(APP_URL+"/secure", code=302)
+   
 
 # method to consttruct Oauth authorization request
 def getUAAAuthorizationUrl():
