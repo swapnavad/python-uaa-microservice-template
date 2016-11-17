@@ -7,7 +7,7 @@ Please login to the predix account using cf login
 * git clone <*this repository*>
   Edit the manifest.yml
   * add the uaa instance to the list of services,
-  * set env for client_id and base64encodedClientDetails
+  * set client_id and base64encodedClientDetails
 * cf push <*your-appname*>
 
 
