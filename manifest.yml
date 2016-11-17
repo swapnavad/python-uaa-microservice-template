@@ -5,7 +5,7 @@ applications:
   buildpack: python_buildpack
   command: python application-controller.py
 services:
-   - camp-test-uaa #my_predix_uaa  # change this to your UAA instance
+   - #my_predix_uaa  # change this to your UAA instance
 env:
-  client_id: app_client_id # change this to client_id you have created on UAA
-  base64encodedClientDetails: YXBwX2NsaWVudF9pZDpzZWNyZXQ= # change this  to base64 encoding of clientid:secret
+  client_id: # change this to client_id you have created on UAA
+  base64encodedClientDetails: # change this  to base64 encoding of clientid:secret
